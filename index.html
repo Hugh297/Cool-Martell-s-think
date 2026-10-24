@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Martells Pizza</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #171512;
+            color: #fff;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .hero {
+            position: relative;
+            display: flex;
+            min-height: min(760px, 100svh);
+            align-items: center;
+            overflow: hidden;
+            padding: clamp(2rem, 8vw, 7rem);
+            isolation: isolate;
+        }
+
+        .hero__image {
+            position: absolute;
+            z-index: -2;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 55%;
+        }
+
+        .hero::after {
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            background: linear-gradient(90deg, rgb(15 13 11 / 82%) 0%, rgb(15 13 11 / 48%) 48%, rgb(15 13 11 / 8%) 100%);
+            content: "";
+        }
+
+        .hero__content {
+            width: min(100%, 680px);
+        }
+
+        .hero__eyebrow {
+            margin: 0 0 1.25rem;
+            color: #e5bd83;
+            font: 600 0.8rem/1.4 Arial, sans-serif;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(3.5rem, 9vw, 7.5rem);
+            font-weight: 400;
+            letter-spacing: -0.055em;
+            line-height: 0.95;
+        }
+
+        .hero__description {
+            max-width: 34rem;
+            margin: 1.5rem 0 0;
+            color: rgb(255 255 255 / 86%);
+            font: 1.05rem/1.7 Arial, sans-serif;
+        }
+
+        main img:not(.hero__image) {
+            display: block;
+            width: 220px;
+            height: 160px;
+            margin: 0 0 1.25rem;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        .contact-photo {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.5rem;
+            border-radius: 0.75rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: 90svh;
+                padding: 2rem 1.5rem;
+            }
+
+            .hero::after {
+                background: linear-gradient(0deg, rgb(15 13 11 / 78%) 0%, rgb(15 13 11 / 38%) 75%, rgb(15 13 11 / 15%) 100%);
+            }
+
+            main img:not(.hero__image) {
+                width: 180px;
+                height: 140px;
+            }
+
+            .contact-photo {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        h2,
+h3 {
+    border-bottom: 1px solid rgb(255 255 255 / 35%);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+    </style>
+</head>
+
+<body id="top">
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <img
+                class="hero__image"
+                src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RkaY7jpJx946m1hhS-ulm3ZSQKFMd0R7fcbW4JgWD4kMRN-ajr89yUrQDi9hPNy-zSk6ad2xs_mh-BILxqRvDalcui8q0pjxMqYr-55_QEDBFjPoGc8DxiYO7Z3MWQqkZRJJgG3raD36g=s1600"
+                alt="A view of Martells Pizza"
+                fetchpriority="high"
+            >
+            <div class="hero__content">
+                <p class="hero__eyebrow">Welcome to Martells Pizza</p>
+                <h1 id="hero-title">Great Pizza<br>Better Staff</h1>
+                <p class="hero__description">
+                    Come to Martells Pizza for the best pizza on the boardwalk.
+                </p>
+            </div>
+        </section>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#whole-pies">Whole Pies</a></li>
+                <li><a href="#slices">Slices</a></li>
+                <li><a href="#drinks">Drinks</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="whole-pies">
+            <h1>Whole Pies</h1>
+
+            <h2>Plain Pie - $42.00</h2>
+            <img class="menu-item-image" src="plainpie.png" alt="Plain Pie">
+            <h2>White Pie - $44.00</h2>
+            <img class="menu-item-image" src="whitepie.png" alt="White Pie">
+            <h2>Pepperoni Pie - $46.00</h2>
+            <img class="menu-item-image" src="peppie.png" alt="Pepperoni Pie">
+            <h2>Sausage Pie - $46.00</h2>
+            <img class="menu-item-image" src="saupie.png" alt="Sausage Pie">
+            <h2>Veggie Pie - $48.00</h2>
+            <img class="menu-item-image" src="vepie.png" alt="Veggie Pie">
+            <h2>Meatlovers Pie - $48.00</h2>
+            <img class="menu-item-image" src="loverpie.png" alt="Meatlovers Pie">
+            <h2>Chicken Parm Pie - $48.00</h2>
+            <img class="menu-item-image" src="parmpie.png" alt="Chicken Parm Pie">
+            <h2>Buffalo Chicken Pie - $48.00</h2>
+            <img class="menu-item-image" src="buffpie.png" alt="Buffalo Chicken Pie">
+            <h2>BBQ Chicken Pie - $48.00</h2>
+            <img class="menu-item-image" src="bbqpie.png" alt="BBQ Chicken Pie">
+            <h2>Chicken Bacon Ranch Pie - $48.00</h2>
+            <img class="menu-item-image" src="ranchpie.png" alt="Chicken Bacon Ranch Pie">
+            <h2>Hawaiian Pie - $48.00</h2>
+            <img class="menu-item-image" src="hawpie.png" alt="Hawaiian Pie">
+            <p><a href="#top">Back to Top</a></p>
+        </section>
+
+        <section id="slices">
+            <h1>Slices</h1>
+            <h2>Please note that only select slices are made each day.</h2>
+            <h2>Plain Slice - $6.50</h2>
+            <img class="menu-item-image" src="PlainSlice.png" alt="Plain Slice">
+            <h2>White Slice - $6.75</h2>
+            <img class="menu-item-image" src="White.png" alt="White Slice">
+            <h2>Pepperoni Slice - $6.75</h2>
+            <img class="menu-item-image" src="Pep.png" alt="Pepperoni Slice">
+            <h2>Sausage Pepper/Onion Slice - $6.75</h2>
+            <img class="menu-item-image" src="Spo.png" alt="Sausage Pepper/Onion Slice">
+            <h2>Chicken Parm Slice - $6.75</h2>
+            <img class="menu-item-image" src="Parm.png" alt="Chicken Parm Slice">
+            <h2>Buffalo Chicken Slice - $6.75</h2>
+            <img class="menu-item-image" src="Buff.png" alt="Buffalo Chicken Slice">
+            <h2>Chicken Bacon Ranch Slice - $6.75</h2>
+            <img class="menu-item-image" src="Ranch.png" alt="Chicken Bacon Ranch Slice">
+            <h2>Hawaiian Slice - $6.75</h2>
+            <img class="menu-item-image" src="Haw.png" alt="Hawaiian Slice">
+            <h2>Mushroom Slice - $6.75</h2>
+            <img class="menu-item-image" src="Mush.png" alt="Mushroom Slice">
+            <p><a href="#top">Back to Top</a></p>
+        </section>
+
+        <section id="drinks">
+            <h1>Drinks</h1>
+            <h2>Pepsi Fountain Drinks</h2>
+            <h3>Small - $3.79</h3>
+            <img class="menu-item-image" src="drink.png" alt="Small Drink">
+            <h3>Large - $4.79</h3>
+            <img class="menu-item-image" src="drink.png" alt="Large Drink">
+
+            <h2>Packaged Drinks</h2>
+            <h3>Red Bull - $9.00</h3>
+            <img class="menu-item-image" src="red.png" alt="Red Bull">
+            <h3>Red Bull Sugar Free - $9.00</h3>
+            <img class="menu-item-image" src="redfree.png" alt="Red Bull Sugar Free">
+            <h3>Gatorade Red - $4.00</h3>
+            <img class="menu-item-image" src="gred.png" alt="Gatorade Red">
+            <h3>Gatorade Blue - $4.00</h3>
+            <img class="menu-item-image" src="gblue.png" alt="Gatorade Blue">
+            <h3>Gatorade Lemon Lime - $4.00</h3>
+            <img class="menu-item-image" src="glime.png" alt="Gatorade Lemon Lime">
+            <h3>Gatorade Orange - $4.00</h3>
+            <img src="go.png" alt="Gatorade Orange">
+            <h3>Gatorade Purple - $4.00</h3>
+            <img src="gp.png" alt="Gatorade Purple">
+            <h3>Apple Juice 10oz Bottle - $3.79</h3>
+            <img src="apple.png" alt="Apple Juice 10oz Bottle">
+            <h3>Water 20oz Bottle - $4.00</h3>
+            <img src="water.png" alt="Water 20oz Bottle">
+            <h3>Milk - $3.00</h3>
+            <img src="milk.png" alt="Milk">
+
+            <h2>Hot Beverages</h2>
+            <h3>Coffee - $2.49</h3>
+            <img src="coffee.png" alt="Coffee">
+            <h3>Tea - $2.49</h3>
+            <img src="tea.png" alt="Tea">
+            <h3>Hot Chocolate - $2.49</h3>
+            <img src="hot.png" alt="Hot Chocolate">
+            <p><a href="#top">Back to Top</a></p>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+            <h3>Address:308 Boardwalk, Point Pleasant Beach, NJ 08742</h3>
+            <h3>Manager</h3>
+            <h3>John Agudo: Phone: 973-634-8433</h3>
+            <img class="contact-photo" src="Jon.jpeg" alt="John Agudo">
+            <h3>Staff</h3>
+            <h3>Hugh Mentone: Phone: 908-433-7197</h3>
+            <img class="contact-photo" src="Hugh.jpeg" alt="Hugh Mentone">
+            <h3>Maverick Haugh: Phone: 732-948-2711</h3>
+            <img class="contact-photo" src="Mav.png" alt="Maverick Haugh">
+            <h3>Samuel Montoya: Phone: 848-482-6668</h3>
+            <img class="contact-photo" src="Sam.jpeg" alt="Samuel Montoya">
+            <h3>Tyler Potter: Phone: 848-241-2789</h3>
+            <img class="contact-photo" src="T.png" alt="Tyler Potter">
+            <h3>Peter Kabbel: Phone: 917-685-5637</h3>
+            <img class="contact-photo" src="Peter.png" alt="Peter Kabbel">
+            <h3>Aidan Dombrowsky: Phone: 732-977-0770</h3>
+            <img class="contact-photo" src="Aidan.png" alt="Aidan Dombrowsky">
+            <h3>Kannon Anderson: Phone: 848-480-3646</h3>
+            <img class="contact-photo" src="Kannon.jpeg" alt="Kannon Anderson">
+            <h3>Chase Vanderhoof: Phone: 732-267-7995</h3>
+            <img class="contact-photo" src="Chase.JPG" alt="Chase Vanderhoof">
+            <h3>Cullen Swayz: Phone: 732-890-7055</h3>
+            <img class="contact-photo" src="Cullen.JPG" alt="Cullen Swayz">
+        </section>
+    </main>
+</body>
+</html>
